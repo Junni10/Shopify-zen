@@ -1,0 +1,69 @@
+<footer>
+  <div class="footer-container" id="responsive-two-columns-footer">
+    <div class="footer-logo">
+      <img src="{{ 'Zen-Curry.png' | asset_url }}" alt="Zen Curry Logo">
+    </div>
+    <div class="footer-text">
+      <div class="footer-text-row">
+        <th scope="row"><img src="{{ 'footer-socials-03.png' | asset_url }}" width="30px" alt="Phone"></th>
+        <td>{{ section.settings.phone }}</td>
+      </div>
+      <div class="footer-text-row">
+        <th scope="row"><img src="{{ 'footer-socials-04.png' | asset_url }}" width="30px" alt="Address"></th>
+        <td>{{ section.settings.address }}</td>
+      </div>
+      <div class="footer-text-row">
+        <th scope="row"><img src="{{ 'footer-socials.png' | asset_url }}" width="30px" alt="Hours"></th>
+        <td>{{ section.settings.hours }}</td>
+      </div>
+      <div class="footer-text-row">
+        <td>
+          <a href="{{ section.settings.instagram_url }}" target="_blank">
+            <img class="social-img" src="{{ 'socials.png' | asset_url }}" width="30px" alt="Instagram">
+          </a>
+          <a href="{{ section.settings.facebook_url }}" target="_blank">
+            <img class="social-img" src="{{ 'socials-08.png' | asset_url }}" width="30px" alt="Facebook">
+          </a>
+          <img class="social-img" src="{{ 'footer-socials-06.png' | asset_url }}" width="30px" alt="Ubereats">
+          <img class="social-img" src="{{ 'socials-09.png' | asset_url }}" width="30px" alt="DoorDash">
+        </td>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "(702) 912-4404"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "7835 S Rainbow Blvd #9, Las Vegas, NV 89135"
+    },
+    {
+      "type": "text",
+      "id": "hours",
+      "label": "Business Hours",
+      "default": "Monday-Sunday 11:00am - 9:30pm"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    }
+  ]
+}
+{% endschema %}

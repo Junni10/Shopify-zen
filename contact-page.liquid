@@ -1,0 +1,122 @@
+<div class="responsive-two-columns-contact">
+  <div id="contact-image">
+    <img src="{{ 'Front-door.png' | asset_url }}" alt="Zen curry front door">
+  </div>
+  <div>
+    <h2>Contact Us</h2>
+    <img src="{{ 'contact-10.png' | asset_url }}" width="40px"> {{ section.settings.phone }}<br>
+    <img src="{{ 'contact-11.png' | asset_url }}" width="40px"> {{ section.settings.email }}<br>
+    <img src="{{ 'contact-12.png' | asset_url }}" width="40px"> {{ section.settings.address }}
+
+    <h2>Business Hours</h2>
+    <img src="{{ 'contact-13.png' | asset_url }}" width="40px"> {{ section.settings.hours }}<br>
+    <img src="{{ 'contact-13.png' | asset_url }}" width="40px"> {{ section.settings.holiday_hours }}
+  </div>
+</div>
+
+<br>
+
+<div class="form-container">
+  <h1>Send Us a Message!</h1>
+  {%- form 'contact', id: 'contactForm' -%}
+    {% if form.posted_successfully? %}
+      <div class="success-message" style="display:block;">Message sent successfully!</div>
+    {% endif %}
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" placeholder="Name" name="contact[name]" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email*" name="contact[email]" required>
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <input type="tel" placeholder="Phone Number" name="contact[phone]">
+      </div>
+    </div>
+    <div class="form-row full">
+      <div class="form-group">
+        <textarea placeholder="Comment" name="contact[body]" required></textarea>
+      </div>
+    </div>
+    <button type="submit">Send</button>
+  {%- endform -%}
+</div>
+
+<div class="other-locations">
+  <h2>Our Other Locations</h2>
+</div>
+
+<div class="responsive-three-columns-contact">
+  <div>
+    <iframe src="{{ section.settings.map1_url }}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div>
+    <iframe src="{{ section.settings.map2_url }}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div>
+    <iframe src="{{ section.settings.map3_url }}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone",
+      "default": "(702) 912-4404"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "zencurryexpresslv@gmail.com"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "7835 S Rainbow Blvd #9, Las Vegas, NV 89139"
+    },
+    {
+      "type": "text",
+      "id": "hours",
+      "label": "Business Hours",
+      "default": "Monday - Sunday  11:00am - 9:30pm"
+    },
+    {
+      "type": "text",
+      "id": "holiday_hours",
+      "label": "Holiday Closures",
+      "default": "Closed Thanksgiving, Christmas, New Years"
+    },
+    {
+      "type": "text",
+      "id": "map1_url",
+      "label": "Map 1 Embed URL",
+      "default": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6445.266211121224!2d-115.2094235!3d36.12679530000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c6b70b157763%3A0x43618037c7dba25!2sZen%20Curry%20House!5e0!3m2!1sen!2sus!4v1764129016597!5m2!1sen!2sus"
+    },
+    {
+      "type": "text",
+      "id": "map2_url",
+      "label": "Map 2 Embed URL",
+      "default": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3216.490205064348!2d-115.14286320000001!3d36.27615389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8e919ac47e219%3A0x2a37ff487e6e22d0!2sZen%20Curry%20House!5e0!3m2!1sen!2sus!4v1764129087496!5m2!1sen!2sus"
+    },
+    {
+      "type": "text",
+      "id": "map3_url",
+      "label": "Map 3 Embed URL",
+      "default": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.7107759099536!2d-115.30435!3d36.10053779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8b9d324129a53%3A0x39c7adde0376c7d8!2sZen%20Curry%20West!5e0!3m2!1sen!2sus!4v1764129176718!5m2!1sen!2sus"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Page"
+    }
+  ]
+}
+{% endschema %}

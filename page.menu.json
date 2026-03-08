@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "menu-items": {
+      "type": "menu-items",
+      "settings": {}
+    }
+  },
+  "order": ["menu-items"]
+}

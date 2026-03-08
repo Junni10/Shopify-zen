@@ -1,0 +1,75 @@
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <img src="{{ 'hamburger-15.png' | asset_url }}" alt="Menu" class="hamburger-icon">
+    <img src="{{ 'hamburger-14.png' | asset_url }}" alt="Close" class="close-icon">
+  </div>
+  <div class="awning-wrapper">
+    <img src="{{ 'Zen-curry-awning.png' | asset_url }}" alt="yellow and white awning" class="img-base">
+    <a href="{{ routes.root_url }}"></a>
+    <div class="img-overlay-container">
+      <img src="{{ 'Zen-Curry.png' | asset_url }}" alt="zen curry logo" class="img-overlay">
+    </div>
+  </div>
+  <div class="list-container">
+    <ul class="list-left">
+      <li><a href="{{ routes.root_url }}">Home</a></li>
+      <li><a href="{{ pages['menu'].url }}">Menu</a></li>
+      <li><a href="{{ pages['contact'].url }}">Contact</a></li>
+    </ul>
+    <ul class="list-right">
+      <li>
+        <a class="rounded-button" id="order-online-button"
+          href="{{ section.settings.order_url }}" target="_blank">Order Online</a>
+      </li>
+      <li>
+        <a class="socials-intro" href="{{ section.settings.instagram_url }}" target="_blank">
+          <img src="{{ 'Socials-02.png' | asset_url }}" alt="Instagram">
+        </a>
+      </li>
+      <li>
+        <a class="socials-intro" href="{{ section.settings.facebook_url }}" target="_blank">
+          <img src="{{ 'Socials-01.png' | asset_url }}" alt="Facebook">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const listContainer = document.querySelector('.list-container');
+    hamburger.classList.toggle('active');
+    listContainer.classList.toggle('active');
+  }
+
+  document.querySelectorAll('.list-container a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.hamburger').classList.remove('active');
+      document.querySelector('.list-container').classList.remove('active');
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "url",
+      "id": "order_url",
+      "label": "Order Online URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    }
+  ]
+}
+{% endschema %}

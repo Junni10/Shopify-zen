@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "hero-carousel": {
+      "type": "hero-carousel",
+      "settings": {}
+    },
+    "intro": {
+      "type": "intro",
+      "settings": {}
+    },
+    "what-we-serve": {
+      "type": "what-we-serve",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "reviews",
+      "settings": {}
+    },
+    "founder": {
+      "type": "founder",
+      "settings": {}
+    },
+    "instagram-feed": {
+      "type": "instagram-feed",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero-carousel",
+    "intro",
+    "what-we-serve",
+    "reviews",
+    "founder",
+    "instagram-feed"
+  ]
+}

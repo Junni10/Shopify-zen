@@ -1,0 +1,32 @@
+<div id="What-we-serve">
+  <div class="container">
+    <h2>What We Serve</h2>
+    <div class="row justify-content-center">
+      <div class="col-sm-4 col-md-4">
+        <img src="{{ 'What-we-serve-01.png' | asset_url }}" alt="Curry">
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <img src="{{ 'What-we-serve-02.png' | asset_url }}" alt="Entrees">
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <img src="{{ 'What-we-serve-03.png' | asset_url }}" alt="Sides">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-4 col-md-4"><div>Curry</div></div>
+      <div class="col-sm-4 col-md-4"><div>Entrees</div></div>
+      <div class="col-sm-4 col-md-4"><div>Sides</div></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What We Serve",
+  "presets": [
+    {
+      "name": "What We Serve"
+    }
+  ]
+}
+{% endschema %}

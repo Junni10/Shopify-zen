@@ -1,0 +1,27 @@
+<div class="responsive-two-columns">
+  <div>
+    {{ section.settings.intro_text }}
+  </div>
+  <div id="intro">
+    <img src="{{ 'Curry-House-front.webp' | asset_url }}" alt="Zen curry store front">
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Intro",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "intro_text",
+      "label": "Introduction Text",
+      "default": "<p>Hey there, we're Zen Curry Express. Located on S Rainbow Blvd., we're proud to be one of Las Vegas's TOP destinations for authentic Japanese curry. Our curry is made from scratch, delivering bold, delicious flavors in every bite. Come see why we're a local favorite!</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Intro"
+    }
+  ]
+}
+{% endschema %}

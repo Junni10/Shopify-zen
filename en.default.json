@@ -1,0 +1,17 @@
+{
+  "general": {
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send"
+    }
+  }
+}

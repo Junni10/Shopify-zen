@@ -1,0 +1,70 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Zen Curry Express",
+    "theme_version": "1.0.0",
+    "theme_author": "Zen Curry Express",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Color",
+        "default": "#FFAD59"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background Color",
+        "default": "#FFFCE7"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Body Text Color",
+        "default": "#707070"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      }
+    ]
+  },
+  {
+    "name": "Store Info",
+    "settings": [
+      {
+        "type": "text",
+        "id": "store_phone",
+        "label": "Phone Number",
+        "default": "(702) 912-4404"
+      },
+      {
+        "type": "text",
+        "id": "store_hours",
+        "label": "Business Hours",
+        "default": "Monday-Sunday 11:00am - 9:30pm"
+      },
+      {
+        "type": "url",
+        "id": "order_online_url",
+        "label": "Order Online URL"
+      }
+    ]
+  }
+]

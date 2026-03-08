@@ -1,0 +1,22 @@
+<h1 class="top-banner">
+  <a href="{{ section.settings.order_url }}" target="_blank">{{ section.settings.banner_text }}</a>
+</h1>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Banner Text",
+      "default": "Order Online Available! ➜"
+    },
+    {
+      "type": "url",
+      "id": "order_url",
+      "label": "Order Online URL"
+    }
+  ]
+}
+{% endschema %}
